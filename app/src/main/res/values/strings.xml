@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Weather app vayu tech</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_city_name">Enter City Name</string>
+    <string name="todo">TODO</string>
+    <string name="today">today</string>
+    <string name="feels_like">feels_like</string>
+
+    <string name="temp">%.1f°F</string>
+    <string name="humidity_value">%.1f%%</string>
+    <string name="wind_speed">%.1f m/s</string>
+    <string name="max_temp">%.1f°F</string>
+    <string name="condition">%s</string>
+    <string name="city">%s</string>
+    <string name="todo4">TODO</string>
+    <string name="daily_forecast">Daily Forecast</string>
+    <string name="hourly_forecast">Hourly Forecast</string>
+    <string name="current_weather">Current Weather</string>
+    <string name="textview">TextView</string>
+    <string name="todo5">TODO</string>
+
+
+</resources>

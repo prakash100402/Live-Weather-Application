@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="cityh" type="id" />
+    <item name="conditionh" type="id" />
+    <item name="temp_conditionH" type="id" />
+    <item name="relativeh" type="id" />
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bghour"
+        android:orientation="vertical"
+        android:padding="10dp"
+
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="09:00 AM" />
+
+        <ImageView
+            android:id="@+id/weather_img"
+            android:layout_width="81dp"
+            android:layout_height="85dp"
+            android:contentDescription="@string/todo5"
+            android:src="@drawable/ic_cloudy" />
+
+        <TextView
+            android:id="@+id/temph"
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck"
+            tools:text="    36C" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            tools:ignore="DuplicateIds"
+            tools:text="Mostly cloudy" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

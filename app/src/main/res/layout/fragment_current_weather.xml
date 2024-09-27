@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_current_weathe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weather_forecast"
+    tools:context=".fragment_current_weather">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="84dp"
+            android:background="@drawable/weather_forecast"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck">
+
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="112dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="112dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                tools:text="New Delhi" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="237dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/city"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="88dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="86dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:text="Friday, June 30" />
+
+            <TextView
+                android:id="@+id/condition"
+                android:layout_width="209dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/weather_resource"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="99dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="101dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck"
+                tools:text="Light Rain" />
+
+            <ImageView
+                android:id="@+id/weather_resource"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_below="@+id/date"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="102dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="104dp"
+                android:padding="8dp"
+                android:src="@drawable/art_light_rain"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/temp_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/condition"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="112dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="113dp"
+                android:layout_marginBottom="22dp"
+                android:padding="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                tools:text="36C" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="90dp"
+            android:layout_weight="1"
+            android:background="@drawable/bground"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relative">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    tools:ignore="NestedWeights">
+
+                    <ImageView
+                        android:id="@+id/thermometer"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="TODO"
+                        android:src="@drawable/thermometer"
+                        tools:ignore="ContentDescription,HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/feels_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/thermometer"
+                        android:text="Temp."
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/temph"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/feels_like"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@+id/thermometer"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="22C" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:baselineAligned="false"
+                    android:contentDescription="TODO"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    tools:ignore="HardcodedText">
+
+                    <ImageView
+                        android:id="@+id/humidity_img"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/humidity"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/humidity"
+                        android:layout_width="67dp"
+                        android:layout_height="23dp"
+                        android:layout_toEndOf="@+id/humidity_img"
+                        android:text="humidity"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="TextSizeCheck" />
+
+                    <TextView
+                        android:id="@+id/humidity_value"
+                        android:layout_width="53dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/humidity"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@+id/humidity_img"
+                        android:baselineAligned="false"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="TextSizeCheck"
+                        tools:text="22C" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                tools:ignore="DisableBaselineAlignment">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="TODO"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    tools:ignore="HardcodedText,NestedWeights">
+
+                    <ImageView
+                        android:id="@+id/wind_img"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/wind"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/wind"
+                        android:layout_width="65dp"
+                        android:layout_height="19dp"
+                        android:layout_toEndOf="@+id/wind_img"
+                        android:text="Wind"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="TextSizeCheck" />
+
+                    <TextView
+                        android:id="@+id/wind_value"
+                        android:layout_width="62dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/wind"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@+id/wind_img"
+                        android:contentDescription="TODO"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="TextSizeCheck"
+                        tools:text="22C" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/sun"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/sun"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/sun_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/sun"
+                        android:text="Max Temp."
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/temp_max"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sun_txt"
+                        android:layout_marginTop="4dp"
+                        android:layout_toEndOf="@+id/sun"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="TextSizeCheck"
+                        tools:text="22C" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

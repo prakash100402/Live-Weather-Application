@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_hourly_forecast"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weather_forecast"
+    tools:context=".fragment_hourly_forecast">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@id/relativeh"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="84dp"
+            android:background="@drawable/weather_forecast"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck">
+
+
+            <TextView
+                android:id="@id/cityh"
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="112dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="112dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                tools:text="New Delhi" />
+
+            <TextView
+                android:id="@+id/dateh"
+                android:layout_width="237dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cityh"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="88dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="86dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:text="Friday, June 30" />
+
+            <TextView
+                android:id="@id/conditionh"
+                android:layout_width="209dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/weather_resourceh"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="99dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="101dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck"
+                tools:text="Light Rain" />
+
+            <ImageView
+                android:id="@id/weather_resourceh"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_below="@id/dateh"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="102dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="104dp"
+                android:padding="8dp"
+                android:src="@drawable/art_light_rain"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@id/temp_conditionH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/conditionh"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="112dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="113dp"
+                android:layout_marginBottom="22dp"
+                android:padding="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                tools:text="36C" />
+
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_hourly_forecast"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeh"
+            app:layout_constraintVertical_bias="0.202"
+            tools:ignore="TextSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

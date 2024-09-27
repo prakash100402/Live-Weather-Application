@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bghour"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/weather_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/todo5"
+        android:src="@drawable/ic_cloudy" />
+
+    <TextView
+        android:id="@+id/Date"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/weather_img"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="June 30" />
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/Date"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Sat" />
+
+    <TextView
+        android:id="@+id/temph"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/day"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="32/26" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/temph"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text=" thunderstorm" />
+</RelativeLayout>

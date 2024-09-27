@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_current_weather">
+
+    <fragment
+        android:id="@+id/fragment_current_weather"
+        android:name="com.example.weatherappvayutech.fragment_current_weather"
+        android:label="Current Weather"
+        tools:layout="@layout/fragment_current_weather" />
+    <fragment
+        android:id="@+id/fragment_hourly_forecast"
+        android:name="com.example.weatherappvayutech.fragment_hourly_forecast"
+        android:label="Hourly Forecast"
+        tools:layout="@layout/fragment_hourly_forecast" />
+    <fragment
+        android:id="@+id/fragment_daily_forecast"
+        android:name="com.example.weatherappvayutech.fragment_daily_forecast"
+        android:label="Daily Forecast"
+        tools:layout="@layout/fragment_daily_forecast" />
+</navigation>
